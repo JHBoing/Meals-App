@@ -17,7 +17,11 @@ class MealItem extends StatelessWidget {
     Navigator.of(context).pushNamed(
       MealDetailScreen.routeName,
       arguments: id
-    );
+    ).then((result) {
+      if(result != null) {
+        //this.removeItem(result);
+      }
+    });
   }
 
   String get complexityText {
